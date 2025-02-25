@@ -42,6 +42,26 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 25%; /* 4 товара в ряд */
+}
+/* Tablet: 2 items */
+@media (max-width: 1024px) {
+    .swiper-slide {
+        width: 50%; /* 2 товара в ряд */
+    }
+    .flormar-slider-title {
+        text-align: center;
+    }
+}
+
+/* Mobile: 1 item */
+@media (max-width: 768px) {
+    .swiper-slide {
+        width: 100%; /* 1 товар в ряд */
+    }
+    .flormar-slider-title {
+        text-align: center;
+    }
 }
 
 /* Make sure Swiper does not override our buttons */
