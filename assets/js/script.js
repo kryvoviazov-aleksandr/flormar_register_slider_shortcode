@@ -2,11 +2,8 @@ document.addEventListener("DOMContentLoaded", function () {
     new Swiper(".swiper-container", {
         loop: true,
         slidesPerView: 1,
-        spaceBetween: 10,
-        autoplay: {
-            delay: 3000, // Auto-slide every 3 seconds
-            disableOnInteraction: false,
-        },
+        spaceBetween: 20,
+        centeredSlides: false, // Disable centering
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
@@ -16,8 +13,9 @@ document.addEventListener("DOMContentLoaded", function () {
             clickable: true,
         },
         breakpoints: {
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 }
+            640: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+            1280: { slidesPerView: 4 }
         }
     });
 });

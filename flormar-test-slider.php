@@ -28,27 +28,117 @@ function flormar_register_slider_shortcode() {
 }
 add_action('init', 'flormar_register_slider_shortcode');
 
-// Render the slider HTML structure
+// Render the slider with custom navigation buttons
 function flormar_render_slider() {
     ob_start();
     ?>
-    <div class="flormar-slider-container">
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">Slide 1</div>
-                <div class="swiper-slide">Slide 2</div>
-                <div class="swiper-slide">Slide 3</div>
-                <div class="swiper-slide">Slide 4</div>
-                <div class="swiper-slide">Slide 5</div>
-                <div class="swiper-slide">Slide 6</div>
+    <div class="flormar-slider-wrapper">
+        <div class="flormar-slider-container">
+            <h2 class="flormar-slider-title">המוצרים הנמכרים ביותר</h2> <!-- Best selling products in Hebrew -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <a href="#" class="product-button">
+                                <div class="product-image">
+                                    <img src="<?php echo plugin_dir_url(__FILE__) ?>assets/img/image.png" alt="Product Image">
+                                </div>
+                                <h3 class="product-title">Product Name</h3>
+                                <p class="product-price">₪89.90</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <a href="#" class="product-button">
+                                <div class="product-image">
+                                    <img src="<?php echo plugin_dir_url(__FILE__) ?>assets/img/image1.png" alt="Product Image">
+                                </div>
+                                <h3 class="product-title">Product Name</h3>
+                                <p class="product-price">₪89.90</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <a href="#" class="product-button">
+                                <div class="product-image">
+                                    <img src="<?php echo plugin_dir_url(__FILE__) ?>assets/img/image2.png" alt="Product Image">
+                                </div>
+                                <h3 class="product-title">Product Name</h3>
+                                <p class="product-price">₪89.90</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <a href="#" class="product-button">
+                                <div class="product-image">
+                                    <img src="<?php echo plugin_dir_url(__FILE__) ?>assets/img/image3.png" alt="Product Image">
+                                </div>
+                                <h3 class="product-title">Product Name</h3>
+                                <p class="product-price">₪89.90</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <a href="#" class="product-button">
+                            <div class="product-image">
+                                    <img src="<?php echo plugin_dir_url(__FILE__) ?>assets/img/image4.png" alt="Product Image">
+                                </div>
+                                <h3 class="product-title">Product Name</h3>
+                                <p class="product-price">₪89.90</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <a href="#" class="product-button">
+                                <div class="product-image">
+                                    <img src="<?php echo plugin_dir_url(__FILE__) ?>assets/img/image5.png" alt="Product Image">
+                                </div>
+                                <h3 class="product-title">Product Name</h3>
+                                <p class="product-price">₪89.90</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Custom Navigation buttons -->
+                <div class="swiper-button-prev">
+                    <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="19.1297" cy="19.1297" r="19.1297" transform="rotate(-180 19.1297 19.1297)" fill="#403C3D"/>
+                        <g clip-path="url(#clip0_410_126)">
+                            <path d="M22.3309 31.4307L25.0169 28.6948L15.9596 19.575L25.0169 10.5177L22.3309 7.76926L13.2111 16.889L10.4627 19.575L13.2111 22.3234L22.3309 31.4432L22.3309 31.4307Z" fill="white"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_410_126">
+                                <rect width="24.9857" height="24.9857" fill="white" transform="translate(32.0129 32.0129) rotate(-180)"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="swiper-button-next">
+                    <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(180deg);">
+                        <circle cx="19.1297" cy="19.1297" r="19.1297" transform="rotate(-180 19.1297 19.1297)" fill="#403C3D"/>
+                        <g clip-path="url(#clip0_410_126)">
+                            <path d="M22.3309 31.4307L25.0169 28.6948L15.9596 19.575L25.0169 10.5177L22.3309 7.76926L13.2111 16.889L10.4627 19.575L13.2111 22.3234L22.3309 31.4432L22.3309 31.4307Z" fill="white"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_410_126">
+                                <rect width="24.9857" height="24.9857" fill="white" transform="translate(32.0129 32.0129) rotate(-180)"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
             </div>
-            <!-- Navigation buttons -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <!-- Pagination -->
-            <div class="swiper-pagination"></div>
         </div>
     </div>
     <?php
     return ob_get_clean();
 }
+
+
